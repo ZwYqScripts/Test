@@ -1,0 +1,84 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local LoadingScreen = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextLabel_2 = Instance.new("TextLabel")
+local TextLabel_3 = Instance.new("TextLabel")
+
+--Properties:
+
+LoadingScreen.Name = "LoadingScreen"
+LoadingScreen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+LoadingScreen.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = LoadingScreen
+Frame.BackgroundColor3 = Color3.fromRGB(27, 27, 27)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Size = UDim2.new(1, 0, 1, 0)
+
+TextLabel.Parent = Frame
+TextLabel.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.49963975, 0, 0.5, 0)
+TextLabel.Size = UDim2.new(0, 777, 0, 178)
+TextLabel.Font = Enum.Font.SourceSansBold
+TextLabel.Text = "ZwYq's TradeScam"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeTransparency = 0.000
+TextLabel.TextWrapped = true
+
+TextLabel_2.Parent = Frame
+TextLabel_2.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.89265132, 0, 0.974691391, 0)
+TextLabel_2.Size = UDim2.new(0, 280, 0, 41)
+TextLabel_2.Font = Enum.Font.SourceSansBold
+TextLabel_2.Text = "not a bank stealer :skull:"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_2.TextScaled = true
+TextLabel_2.TextSize = 14.000
+TextLabel_2.TextStrokeTransparency = 0.000
+TextLabel_2.TextWrapped = true
+
+TextLabel_3.Parent = Frame
+TextLabel_3.AnchorPoint = Vector2.new(0.5, 0.5)
+TextLabel_3.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+TextLabel_3.BackgroundTransparency = 1.000
+TextLabel_3.Position = UDim2.new(0.5, 0, 0.598148167, 0)
+TextLabel_3.Size = UDim2.new(0, 280, 0, 41)
+TextLabel_3.Font = Enum.Font.SourceSansBold
+TextLabel_3.Text = "Trust?"
+TextLabel_3.TextColor3 = Color3.fromRGB(0, 4, 255)
+TextLabel_3.TextScaled = true
+TextLabel_3.TextSize = 14.000
+TextLabel_3.TextStrokeTransparency = 0.000
+TextLabel_3.TextWrapped = true
+
+-- Scripts:
+
+local function HLXVU_fake_script() -- TextLabel.LocalScript 
+	local script = Instance.new('LocalScript', TextLabel)
+
+	while true do
+		wait(0.3)
+		script.Parent.Text = "ZwYq's TradeScam Loading."
+		wait(0.3)
+		script.Parent.Text = "ZwYq's TradeScam Loading.."
+		wait(0.3)
+		script.Parent.Text = "ZwYq's TradeScam Loading..."
+	end
+	
+	wait(5)
+	
+		script:Destroy()
+end
+coroutine.wrap(HLXVU_fake_script)()
